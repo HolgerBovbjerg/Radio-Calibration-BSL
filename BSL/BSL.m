@@ -27,8 +27,11 @@ thetas = zeros(4,k);
 thetas(:,1) = theta_curr';
 
 %% Calculate first likelihood (first point in markov chain)
+% For parallel computing: parfor i = 1:L
 for i = 1:L
-    [Pv, t] = sim_turin_matrix_gpu(N, B, Ns, theta_curr);
+    [Pv, t] = sim_turin_matrix(N, B, Ns, theta_prop);
+    % For GPU acceleration
+    % [Pv, t] = sim_turin_matrix_gpu(N, B, Ns, theta_prop);
     s_sim(i,:) = create_statistics(Pv, t);
 end
 
@@ -47,8 +50,11 @@ for j = 2:k
         theta_prop = mvnrnd(theta_curr,covariance);
     end
     % Create statistics based on the proposed theta 
-    parfor i = 1:L
-        [Pv, t] = sim_turin_matrix_gpu(N, B, Ns, theta_prop);
+    % For parallel computing: parfor i = 1:L
+    for i = 1:L
+        [Pv, t] = sim_turin_matrix(N, B, Ns, theta_prop);
+        % For GPU acceleration
+        % [Pv, t] = sim_turin_matrix_gpu(N, B, Ns, theta_prop);
         s_sim(i,:) = create_statistics(Pv, t);
     end
     % Calculate new log-likelihood from statistics
