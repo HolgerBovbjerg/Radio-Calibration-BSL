@@ -6,8 +6,15 @@ To run the examples the repository including subfolders must be added to the MAT
 In ´/ABC´ code involving the ABC method found this includes:
 * Simple rejection ABC implementation - 'ABC_REJ.m'.
 * PMC-ABC method proposed by Ayush Bharti - 'ABC_REJ_PMC.m'.
+
 In ´/BSL´ code involving the BSL method found including an example 'BSL.m'.
-In ´/data_files´ some simulated data files used in the scripts are found. These are mainly used in places were it would require extensive computation to generate the data.In ´/misc´ a function for testing whether or not a propsed parameter is inside the prior range is found.
+
+In ´/data_files´ some simulated data files used in the scripts are found. These are mainly used in places were it would require extensive computation to generate the data.
+
+In ´/misc´ a function for testing whether or not a propsed parameter is inside the prior range is found.
+
 In ´/model_simulation´ a function for simulation of the Turin model is found including an example ´turin_simulation_theoretical_compare.m´. Both a gpu accelerated version and a non-gpu version is found.
+
 In ´/summary_statistics´ the function for calculating summary statistics is found as well as an example of how the summary statistics change with the parameters.  
+
 In ´/synthetic_likelihood´ the function for calculating synethetic likelihood is found along with an example where the likelihood is calculated varying one of the parameters.  
