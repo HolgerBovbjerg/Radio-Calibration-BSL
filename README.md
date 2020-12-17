@@ -4,10 +4,10 @@ This includes code implementations and some examples. Some scripts have included
 To run the examples the repository including subfolders must be added to the MATLAB path.
 ## Folder structure 
 In [`/ABC`](https://github.com/HolgerBovbjerg/Radio-Calibration-BSL/tree/main/ABC) code involving the ABC method found this includes:
-* Simple rejection ABC implementation - 'ABC_REJ.m'.
-* PMC-ABC method proposed by Ayush Bharti - 'ABC_REJ_PMC.m'.
+* Simple rejection ABC implementation - `ABC_REJ.m`.
+* PMC-ABC method proposed by Ayush Bharti - `ABC_REJ_PMC.m`.
 
-In [`/BSL`](https://github.com/HolgerBovbjerg/Radio-Calibration-BSL/tree/main/BSL) code involving the BSL method found including an example 'BSL.m'.
+In [`/BSL`](https://github.com/HolgerBovbjerg/Radio-Calibration-BSL/tree/main/BSL) code involving the BSL method found including an example `BSL.m`.
 
 In [`/data_files`](https://github.com/HolgerBovbjerg/Radio-Calibration-BSL/tree/main/data_files) some simulated data files used in the scripts are found. These are mainly used in places were it would require extensive computation to generate the data.
 
