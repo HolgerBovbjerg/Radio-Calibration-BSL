@@ -13,8 +13,8 @@ In [`/data_files`](https://github.com/HolgerBovbjerg/Radio-Calibration-BSL/tree/
 
 In [`/misc`](https://github.com/HolgerBovbjerg/Radio-Calibration-BSL/tree/main/misc) a function for testing whether or not a propsed parameter is inside the prior range is found.
 
-In [`/model_simulkation`](https://github.com/HolgerBovbjerg/Radio-Calibration-BSL/tree/main/model_simulation) a function for simulation of the Turin model is found including an example ´turin_simulation_theoretical_compare.m´. Both a gpu accelerated version and a non-gpu version is found.
+In [`/model_simulation`](https://github.com/HolgerBovbjerg/Radio-Calibration-BSL/tree/main/model_simulation) a function for simulation of the Turin model is found including an example `turin_simulation_theoretical_compare.m`. Both a gpu accelerated version and a non-gpu version is found.
 
-In [`/summary_statistics`](https://github.com/HolgerBovbjerg/Radio-Calibration-BSL/tree/main/summary_statistics) the function for calculating summary statistics is found as well as an example of how the summary statistics change with the parameters.  
+In [`/summary_statistics`](https://github.com/HolgerBovbjerg/Radio-Calibration-BSL/tree/main/summary_statistics) the function for calculating summary statistics is found as well as an example `summary_statistics_varying_parameters.m` showing how the summary statistics change with the parameters.  
 
-In [`/synthetic_likelihood`](https://github.com/HolgerBovbjerg/Radio-Calibration-BSL/tree/main/synthetic_likelihood) the function for calculating synethetic likelihood is found along with an example where the likelihood is calculated varying one of the parameters.  
+In [`/synthetic_likelihood`](https://github.com/HolgerBovbjerg/Radio-Calibration-BSL/tree/main/synthetic_likelihood) the function for calculating synethetic likelihood is found along with an example `SL_with_one_varying_parameter` where the likelihood is calculated varying one of the parameters.  
