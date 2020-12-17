@@ -18,6 +18,10 @@ covariance = covariance/1e4;
 % A good choice covariance is very important to get good MCMC runs
 %% "Observed data for testing"
 load('S_obs_sim')
+% For generating new s_obs uncomment
+% [Pv, t] = sim_turin_matrix_gpu(1000, Bw, Ns, theta_true);
+% s_obs = create_statistics(Pv, t);
+
 %%
 k = 2500;    % Number of MCMC steps
 L = 300;     % Numberof statistics vectors used per likelihood.
