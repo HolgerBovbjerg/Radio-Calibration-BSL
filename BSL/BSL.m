@@ -8,6 +8,7 @@ Ns = 801; % Number of sample points per Turin simulation
 B = 4e9; % Bandwidth of signal: 4 GHz
 %% Find first proposed Theta and covariance for proposal distribution
 [covariance, theta_curr] = find_cov_prior(prior);
+% Forcing a small lambda start value helps computation time
 theta_curr(3) = 1.76e8;
 theta_start = theta_curr;
 % As it has been found that the above estimated covariance is too large a
