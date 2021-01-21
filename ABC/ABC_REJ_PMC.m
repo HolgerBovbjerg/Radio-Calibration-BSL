@@ -27,7 +27,9 @@ load('S_obs_sim_ABC.mat')
 % S_obs = zeros(2000,9);
 % parfor i = 1:2000 for parallel computing
 % for i = 1:2000
-%     [Pv, t] = sim_turin_matrix_gpu_gpu(N, Bw, Ns, theta_true);
+%     [Pv, t] = sim_turin_matrix(N, Bw, Ns, theta_true);
+%      For GPU acceleration
+%     [Pv, t] = sim_turin_matrix_gpu(N, Bw, Ns, theta_true); 
 %      S_obs(i,:) = create_statistics(Pv, t);
 % end
 
