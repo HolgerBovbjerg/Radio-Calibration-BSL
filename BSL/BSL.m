@@ -8,6 +8,7 @@ Ns = 801; % Number of sample points per Turin simulation
 B = 4e9; % Bandwidth of signal: 4 GHz
 %% Find first proposed Theta and covariance for proposal distribution
 [covariance, theta_curr] = find_cov_prior(prior);
+% Forcing a small lambda start value helps computation time
 theta_curr(3) = 1.76e8;
 theta_start = theta_curr;
 % As it has been found that the above estimated covariance is too large a
@@ -17,6 +18,10 @@ covariance = covariance/1e4;
 % A good choice covariance is very important to get good MCMC runs
 %% "Observed data for testing"
 load('S_obs_sim')
+% For generating new s_obs uncomment
+% [Pv, t] = sim_turin_matrix_gpu(1000, Bw, Ns, theta_true);
+% s_obs = create_statistics(Pv, t);
+
 %%
 k = 2500;    % Number of MCMC steps
 L = 300;     % Numberof statistics vectors used per likelihood.
