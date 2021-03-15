@@ -117,7 +117,7 @@ var_T = var(params_T(1,:));
 var_G0 = var(params_G0(1,:));
 var_lambda = var(params_lambda(1,:));
 var_sigma_N = var(params_sigma_N(1,:));
-covariance = diag([var_T var_G0 var_lambda var_sigma_N]);
+covariance = 2*diag([var_T var_G0 var_lambda var_sigma_N]);
 
 % Choose theta from accepted parameters of last iteration with propbability based on wieghts
 index_T = randsample((1:nbr_extract),sumstat_iter,true,weights(1,:));
@@ -138,7 +138,7 @@ for a = 2:num_iter%num_iter
             theta_curr = mvnrnd(theta_prop(:,i),covariance);
         end
         theta_curr(3) = round(theta_curr(3));
-        %% STEP 2: Simulate data using Turing model, based on parameters from STEP 1 and create statistics
+        %% STEP 2: Simulate data using Turin model, based on parameters from STEP 1 and create statistics
         [Pv, t] = sim_turin_matrix_gpu(N, Bw, Ns, theta_curr);
         S_simulated = create_statistics(Pv, t);
         %% STEP 3: calculate the difference between observed and simulated summary statistics
